@@ -1,0 +1,28 @@
+{
+  "name": "ClientManagement",
+  "version": "0.0.0",
+  "private": true,
+  "scripts": {
+    "start": "node ./bin/www"
+  },
+  "description": "ClientManagement",
+  "author": {
+    "name": "Dariuš",
+    "email": "darius.butkeviciu@gmail.com"
+  },
+  "dependencies": {
+    "body-parser": "^1.8.4",
+    "cookie-parser": "~1.3.3",
+    "cookie-session": "^2.0.0-alpha.1",
+    "cors": "^2.7.1",
+    "debug": "~2.0.0",
+    "express": "~4.9.0",
+    "express-jwt": "^3.3.0",
+    "express-session": "^1.13.0",
+    "jsonwebtoken": "^5.7.0",
+    "mongoose": "^4.4.5",
+    "morgan": "~1.3.0",
+    "serve-favicon": "~2.1.3",
+    "stylus": "0.42.3"
+  }
+}

@@ -1,0 +1,63 @@
+﻿<!Doctype html>
+<html ng-app="frontApp">
+<head>
+    <title>Client Management</title>
+    <link href="Content/bootstrap.min.css" rel="stylesheet" />
+    <link href="Content/bootstrap-theme.min.css" rel="stylesheet" />
+    <link href="Content/site.css" rel="stylesheet" />
+</head>
+<body ng-controller="baseController as base">
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+        <div class="container">
+            <div class="navbar-header">
+                <button class="btn btn-success navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="glyphicon glyphicon-chevron-down"></span>
+                </button>
+                <div class="site-name">
+                    <a>
+                        <h4>Client Management</h4>
+                    </a>
+                </div>
+            </div>
+            <div class="navbar-collapse collapse">
+                
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="nav" ng-show="base.isAdmin">
+                        <a href="/#/users">View users</a>
+                    </li>
+                    <li class="nav" ng-show="!base.isLoggedIn">
+                        <a href="/#/register">Register</a>
+                    </li>
+                    <li class="nav" ng-show="!base.isLoggedIn">
+                        <a href="/#/login">Login</a>
+                    </li>
+                    <li class="nav" ng-show="base.isLoggedIn">
+                        <a href="#" ng-click="base.logout()">Log out</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <section id="body" class="container">
+        <div ng-view></div>
+    </section>
+    <hr />
+    <footer class="container">
+        <p>Client Management - 2016</p>
+    </footer>
+
+
+    <script type="text/javascript" src="scripts/jquery-1.9.1.min.js"></script>
+    <script type="text/javascript" src="scripts/bootstrap.min.js"></script>
+    <script type="text/javascript" src="scripts/angular.min.js"></script>
+    <script type="text/javascript" src="scripts/angular-route.min.js"></script>
+    <script type="text/javascript" src="app/app.js"></script>
+    <script type="text/javascript" src="app/services/tokenInterceptor.js"></script>
+    <script type="text/javascript" src="app/services/userService.js"></script>
+    <script type="text/javascript" src="app/controllers/baseController.js"></script>
+    <script type="text/javascript" src="app/controllers/adminController.js"></script>
+    <script type="text/javascript" src="app/controllers/authController.js"></script>
+    <script type="text/javascript" src="app/controllers/userController.js"></script>
+</body>
+</html>
